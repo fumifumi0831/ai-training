@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -22,568 +21,564 @@
       --border: #E2E8F0;
     }
 
-```
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.8;
-}
-
-/* ─── HERO ─── */
-.hero {
-  background: var(--navy);
-  padding: 0;
-  position: relative;
-  overflow: hidden;
-  min-height: 380px;
-  display: flex;
-  align-items: stretch;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -60px; right: -60px;
-  width: 420px; height: 420px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(37,99,235,0.25) 0%, transparent 70%);
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: -80px; left: 30%;
-  width: 300px; height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
-}
-
-.hero-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 72px 48px;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-label {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
-.hero-title {
-  font-family: 'DM Serif Display', 'Noto Serif JP', serif;
-  font-size: 48px;
-  color: var(--white);
-  line-height: 1.2;
-  margin-bottom: 8px;
-}
-
-.hero-title-ja {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 15px;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 24px;
-  letter-spacing: 0.05em;
-}
-
-.hero-tagline {
-  font-size: 14px;
-  color: rgba(255,255,255,0.75);
-  line-height: 1.9;
-  max-width: 560px;
-  border-left: 2px solid var(--gold);
-  padding-left: 20px;
-}
-
-/* ─── NAV BACK ─── */
-.nav-back {
-  max-width: 1100px;
-  margin: 32px auto 0;
-  padding: 0 48px;
-}
-
-.nav-back a {
-  font-size: 12px;
-  color: var(--text-light);
-  text-decoration: none;
-  letter-spacing: 0.05em;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: color 0.2s;
-}
-
-.nav-back a:hover { color: var(--accent); }
-
-/* ─── MAIN ─── */
-.main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 64px 48px;
-}
-
-/* ─── SECTION HEADER ─── */
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 32px;
-}
-
-.section-num {
-  font-family: 'DM Serif Display', serif;
-  font-size: 48px;
-  color: var(--accent-light);
-  line-height: 1;
-  font-weight: 400;
-}
-
-.section-label {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 500;
-  margin-bottom: 2px;
-}
-
-.section-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--navy);
-}
-
-section { margin-bottom: 72px; }
-
-.divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border), transparent);
-  margin: 0 0 72px;
-}
-
-/* ─── PHILOSOPHY (WHY AI) ─── */
-.philosophy-block {
-  background: var(--navy);
-  border-radius: 16px;
-  padding: 48px;
-  position: relative;
-  overflow: hidden;
-}
-
-.philosophy-block::before {
-  content: '';
-  position: absolute;
-  top: -40px; right: -40px;
-  width: 200px; height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(37,99,235,0.3) 0%, transparent 70%);
-}
-
-.philosophy-quote {
-  font-family: 'DM Serif Display', serif;
-  font-size: 28px;
-  color: var(--white);
-  line-height: 1.5;
-  margin-bottom: 24px;
-  position: relative;
-  z-index: 1;
-}
-
-.philosophy-quote span {
-  color: var(--gold);
-}
-
-.philosophy-body {
-  font-size: 14px;
-  color: rgba(255,255,255,0.72);
-  line-height: 1.9;
-  max-width: 680px;
-  position: relative;
-  z-index: 1;
-}
-
-/* ─── CAREER TIMELINE ─── */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  position: relative;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 19px;
-  top: 20px;
-  bottom: 20px;
-  width: 2px;
-  background: linear-gradient(180deg, var(--accent), var(--gold));
-}
-
-.timeline-item {
-  display: flex;
-  gap: 32px;
-  align-items: flex-start;
-  padding: 20px 0;
-  position: relative;
-  z-index: 1;
-}
-
-.timeline-dot {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--white);
-  border: 2px solid var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.timeline-dot svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--accent);
-  stroke-width: 1.8;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.timeline-dot.gold {
-  border-color: var(--gold);
-  background: var(--navy);
-}
-
-.timeline-dot.gold svg {
-  stroke: var(--gold);
-}
-
-.timeline-content {
-  flex: 1;
-  padding-top: 8px;
-}
-
-.timeline-category {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.timeline-dot.gold + .timeline-content .timeline-category {
-  color: var(--gold);
-}
-
-.timeline-title {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 8px;
-}
-
-.timeline-desc {
-  font-size: 13px;
-  color: var(--text-light);
-  line-height: 1.8;
-}
-
-.timeline-tag {
-  display: inline-block;
-  font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: var(--accent-light);
-  color: var(--accent);
-  font-weight: 500;
-  margin-top: 8px;
-  margin-right: 4px;
-}
-
-/* ─── NOW ─── */
-.now-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  position: relative;
-  overflow: hidden;
-}
-
-.now-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--gold));
-}
-
-.now-left {}
-
-.now-label {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-
-.now-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 16px;
-  line-height: 1.5;
-}
-
-.now-desc {
-  font-size: 13px;
-  color: var(--text-light);
-  line-height: 1.9;
-}
-
-.now-right {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.now-stat {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.now-stat-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: var(--accent-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.now-stat-icon svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--accent);
-  stroke-width: 1.8;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.now-stat-text {
-  font-size: 13px;
-  color: var(--text);
-  line-height: 1.7;
-}
-
-.now-stat-text strong {
-  display: block;
-  font-size: 12px;
-  color: var(--navy);
-  font-weight: 700;
-  margin-bottom: 2px;
-}
-
-/* ─── BELIEF ─── */
-.belief-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.belief-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 28px 24px;
-  position: relative;
-  overflow: hidden;
-}
-
-.belief-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--gold));
-}
-
-.belief-num {
-  font-family: 'DM Serif Display', serif;
-  font-size: 36px;
-  color: var(--accent-light);
-  line-height: 1;
-  margin-bottom: 12px;
-}
-
-.belief-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 10px;
-}
-
-.belief-desc {
-  font-size: 13px;
-  color: var(--text-light);
-  line-height: 1.8;
-}
-
-/* ─── PERSONAL ─── */
-.personal-block {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 40px;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-.personal-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: var(--accent-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.personal-icon svg {
-  width: 36px;
-  height: 36px;
-  stroke: var(--accent);
-  stroke-width: 1.5;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.personal-text {
-  font-size: 14px;
-  color: var(--text);
-  line-height: 1.9;
-}
-
-.personal-text strong {
-  display: block;
-  font-family: 'Noto Serif JP', serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 12px;
-}
-
-/* ─── CTA ─── */
-.cta {
-  background: var(--navy);
-  border-radius: 16px;
-  padding: 48px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.cta::before {
-  content: '';
-  position: absolute;
-  top: -40px; right: -40px;
-  width: 200px; height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(37,99,235,0.3) 0%, transparent 70%);
-}
-
-.cta-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 12px;
-  position: relative;
-  z-index: 1;
-}
-
-.cta-desc {
-  font-size: 13px;
-  color: rgba(255,255,255,0.65);
-  margin-bottom: 32px;
-  position: relative;
-  z-index: 1;
-  line-height: 1.9;
-}
-
-.cta-btn {
-  display: inline-block;
-  padding: 14px 40px;
-  background: var(--gold);
-  color: var(--navy);
-  font-size: 14px;
-  font-weight: 700;
-  border-radius: 999px;
-  letter-spacing: 0.05em;
-  position: relative;
-  z-index: 1;
-  text-decoration: none;
-}
-
-/* ─── ANIMATIONS ─── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.hero-inner > * {
-  animation: fadeUp 0.7s ease both;
-}
-
-/* ─── RESPONSIVE ─── */
-@media (max-width: 768px) {
-  .hero-inner { padding: 48px 24px; }
-  .main { padding: 48px 24px; }
-  .nav-back { padding: 0 24px; }
-  .hero-title { font-size: 32px; }
-  .now-card { grid-template-columns: 1fr; }
-  .belief-grid { grid-template-columns: 1fr; }
-  .personal-block { flex-direction: column; text-align: center; }
-  .philosophy-block { padding: 32px 24px; }
-  .philosophy-quote { font-size: 20px; }
-}
-```
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: var(--navy);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 380px;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 420px; height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,0.25) 0%, transparent 70%);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: 30%;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 72px 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: 'DM Serif Display', 'Noto Serif JP', serif;
+      font-size: 48px;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .hero-title-ja {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 15px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 24px;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-tagline {
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.9;
+      max-width: 560px;
+      border-left: 2px solid var(--gold);
+      padding-left: 20px;
+    }
+
+    /* ─── NAV BACK ─── */
+    .nav-back {
+      max-width: 1100px;
+      margin: 32px auto 0;
+      padding: 0 48px;
+    }
+
+    .nav-back a {
+      font-size: 12px;
+      color: var(--text-light);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .nav-back a:hover { color: var(--accent); }
+
+    /* ─── MAIN ─── */
+    .main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 64px 48px;
+    }
+
+    /* ─── SECTION HEADER ─── */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .section-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 48px;
+      color: var(--accent-light);
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .section-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    section { margin-bottom: 72px; }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 0 0 72px;
+    }
+
+    /* ─── PHILOSOPHY (WHY AI) ─── */
+    .philosophy-block {
+      background: var(--navy);
+      border-radius: 16px;
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .philosophy-block::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,0.3) 0%, transparent 70%);
+    }
+
+    .philosophy-quote {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      color: var(--white);
+      line-height: 1.5;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .philosophy-quote span {
+      color: var(--gold);
+    }
+
+    .philosophy-body {
+      font-size: 14px;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.9;
+      max-width: 680px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── CAREER TIMELINE ─── */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 20px;
+      bottom: 20px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent), var(--gold));
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+      padding: 20px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-dot {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .timeline-dot svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--accent);
+      stroke-width: 1.8;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .timeline-dot.gold {
+      border-color: var(--gold);
+      background: var(--navy);
+    }
+
+    .timeline-dot.gold svg {
+      stroke: var(--gold);
+    }
+
+    .timeline-content {
+      flex: 1;
+      padding-top: 8px;
+    }
+
+    .timeline-category {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .timeline-dot.gold + .timeline-content .timeline-category {
+      color: var(--gold);
+    }
+
+    .timeline-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .timeline-desc {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    .timeline-tag {
+      display: inline-block;
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-weight: 500;
+      margin-top: 8px;
+      margin-right: 4px;
+    }
+
+    /* ─── NOW ─── */
+    .now-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .now-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+    }
+
+    .now-left {}
+
+    .now-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .now-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .now-desc {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.9;
+    }
+
+    .now-right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .now-stat {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .now-stat-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .now-stat-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--accent);
+      stroke-width: 1.8;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .now-stat-text {
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .now-stat-text strong {
+      display: block;
+      font-size: 12px;
+      color: var(--navy);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    /* ─── BELIEF ─── */
+    .belief-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .belief-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .belief-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+    }
+
+    .belief-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 36px;
+      color: var(--accent-light);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .belief-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .belief-desc {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    /* ─── PERSONAL ─── */
+    .personal-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .personal-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .personal-icon svg {
+      width: 36px;
+      height: 36px;
+      stroke: var(--accent);
+      stroke-width: 1.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .personal-text {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.9;
+    }
+
+    .personal-text strong {
+      display: block;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    /* ─── CTA ─── */
+    .cta {
+      background: var(--navy);
+      border-radius: 16px;
+      padding: 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,0.3) 0%, transparent 70%);
+    }
+
+    .cta-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+      line-height: 1.9;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 40px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 999px;
+      letter-spacing: 0.05em;
+      position: relative;
+      z-index: 1;
+      text-decoration: none;
+    }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-inner > * {
+      animation: fadeUp 0.7s ease both;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      .hero-inner { padding: 48px 24px; }
+      .main { padding: 48px 24px; }
+      .nav-back { padding: 0 24px; }
+      .hero-title { font-size: 32px; }
+      .now-card { grid-template-columns: 1fr; }
+      .belief-grid { grid-template-columns: 1fr; }
+      .personal-block { flex-direction: column; text-align: center; }
+      .philosophy-block { padding: 32px 24px; }
+      .philosophy-quote { font-size: 20px; }
+    }
   </style>
 </head>
 <body>
 
 <!-- HERO -->
-
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-label">About</div>
@@ -597,7 +592,6 @@ section { margin-bottom: 72px; }
 </div>
 
 <!-- BACK NAV -->
-
 <div class="nav-back" style="margin-top:32px;">
   <a href="index.html">
     ← サービス概要に戻る
@@ -605,11 +599,9 @@ section { margin-bottom: 72px; }
 </div>
 
 <!-- MAIN -->
-
 <div class="main">
 
   <!-- WHY AI -->
-
   <section>
     <div class="section-header">
       <div class="section-num">01</div>
@@ -633,7 +625,6 @@ section { margin-bottom: 72px; }
   <div class="divider"></div>
 
   <!-- CAREER -->
-
   <section>
     <div class="section-header">
       <div class="section-num">02</div>
@@ -644,62 +635,58 @@ section { margin-bottom: 72px; }
     </div>
     <div class="timeline">
 
-```
-  <div class="timeline-item">
-    <div class="timeline-dot">
-      <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-    </div>
-    <div class="timeline-content">
-      <div class="timeline-category">商社 / 全社向けアプリ開発</div>
-      <div class="timeline-title">「毎日の地味なコスト」を削る仕事</div>
-      <div class="timeline-desc">
-        会議後に議事録をまとめる時間を削減するための<strong>会議要約アプリ</strong>と、パワーポイント資料のレビュー負荷を下げる<strong>資料レビューアプリ</strong>を開発・導入。現場が毎日感じる小さな摩擦を、AIで取り除いた。
+      <div class="timeline-item">
+        <div class="timeline-dot">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-category">商社 / 全社向けアプリ開発</div>
+          <div class="timeline-title">「毎日の地味なコスト」を削る仕事</div>
+          <div class="timeline-desc">
+            会議後に議事録をまとめる時間を削減するための<strong>会議要約アプリ</strong>と、パワーポイント資料のレビュー負荷を下げる<strong>資料レビューアプリ</strong>を開発・導入。現場が毎日感じる小さな摩擦を、AIで取り除いた。
+          </div>
+          <span class="timeline-tag">アプリ開発</span>
+          <span class="timeline-tag">生成AI活用</span>
+        </div>
       </div>
-      <span class="timeline-tag">アプリ開発</span>
-      <span class="timeline-tag">生成AI活用</span>
-    </div>
-  </div>
 
-  <div class="timeline-item">
-    <div class="timeline-dot">
-      <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-    </div>
-    <div class="timeline-content">
-      <div class="timeline-category">コンシューマー業界 / マニュアルRAGシステム</div>
-      <div class="timeline-title">100ページを超えるマニュアルを、瞬時に引き出せる仕組みへ</div>
-      <div class="timeline-desc">
-        お客様からの質問があるたびに、従業員が膨大なマニュアルを読み返すのは現実的ではない。マニュアルをRAGとして構造化・チャンク化し、質問に対して的確に回答できるシステムを構築。現場の「調べる時間」を大幅に削減した。
+      <div class="timeline-item">
+        <div class="timeline-dot">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-category">コンシューマー業界 / マニュアルRAGシステム</div>
+          <div class="timeline-title">100ページを超えるマニュアルを、瞬時に引き出せる仕組みへ</div>
+          <div class="timeline-desc">
+            お客様からの質問があるたびに、従業員が膨大なマニュアルを読み返すのは現実的ではない。マニュアルをRAGとして構造化・チャンク化し、質問に対して的確に回答できるシステムを構築。現場の「調べる時間」を大幅に削減した。
+          </div>
+          <span class="timeline-tag">RAG</span>
+          <span class="timeline-tag">ドキュメント構造化</span>
+        </div>
       </div>
-      <span class="timeline-tag">RAG</span>
-      <span class="timeline-tag">ドキュメント構造化</span>
-    </div>
-  </div>
 
-  <div class="timeline-item">
-    <div class="timeline-dot gold">
-      <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
-    </div>
-    <div class="timeline-content">
-      <div class="timeline-category">製薬企業 / MRレポートのAIレビュー（現在進行中）</div>
-      <div class="timeline-title">「全件レビューの達成」という、諦めていたアウトカムへ</div>
-      <div class="timeline-desc">
-        MRが提出する膨大な日報を、人間が全件レビューするのは件数的に不可能に近い課題だった。AIがリスクのあるレポートを絞り込み、人間はそこだけを確認する仕組みを構築中。コンプライアンスと業務効率を両立させる設計に取り組んでいる。
+      <div class="timeline-item">
+        <div class="timeline-dot gold">
+          <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-category">製薬企業 / MRレポートのAIレビュー（現在進行中）</div>
+          <div class="timeline-title">「全件レビューの達成」という、諦めていたアウトカムへ</div>
+          <div class="timeline-desc">
+            MRが提出する膨大な日報を、人間が全件レビューするのは件数的に不可能に近い課題だった。AIがリスクのあるレポートを絞り込み、人間はそこだけを確認する仕組みを構築中。コンプライアンスと業務効率を両立させる設計に取り組んでいる。
+          </div>
+          <span class="timeline-tag">GxP対応</span>
+          <span class="timeline-tag">コンプライアンス</span>
+          <span class="timeline-tag">製薬業界</span>
+        </div>
       </div>
-      <span class="timeline-tag">GxP対応</span>
-      <span class="timeline-tag">コンプライアンス</span>
-      <span class="timeline-tag">製薬業界</span>
+
     </div>
-  </div>
-
-</div>
-```
-
   </section>
 
   <div class="divider"></div>
 
   <!-- NOW -->
-
   <section>
     <div class="section-header">
       <div class="section-num">03</div>
@@ -752,7 +739,6 @@ section { margin-bottom: 72px; }
   <div class="divider"></div>
 
   <!-- BELIEF -->
-
   <section>
     <div class="section-header">
       <div class="section-num">04</div>
@@ -784,7 +770,6 @@ section { margin-bottom: 72px; }
   <div class="divider"></div>
 
   <!-- PERSONAL -->
-
   <section>
     <div class="section-header">
       <div class="section-num">05</div>
@@ -806,7 +791,6 @@ section { margin-bottom: 72px; }
   </section>
 
   <!-- CTA -->
-
   <div class="cta">
     <div class="cta-title">まずはお気軽にご相談ください</div>
     <div class="cta-desc">
